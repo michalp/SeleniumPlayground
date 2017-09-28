@@ -19,11 +19,10 @@ public class SelenidePropertiesLoader {
     private static final String PROPERTY_BROWSER = "selenide.browser";
 
     private static final String PROPERTY_WEBDRIVER_GECKO_DRIVER = "webdriver.gecko.driver";
+    private static final String PROPERTY_WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
 
     private String baseUrl;
     private String browser;
-    private String fastSetValue;
-    private String timeout;
 
     public SelenidePropertiesLoader() {
         readPropertiesFile(false);
@@ -64,6 +63,7 @@ public class SelenidePropertiesLoader {
 
     private void setCustomProperties(Properties otherProperties) {
         System.setProperty(PROPERTY_WEBDRIVER_GECKO_DRIVER, otherProperties.getProperty(PROPERTY_WEBDRIVER_GECKO_DRIVER));
+        System.setProperty(PROPERTY_WEBDRIVER_CHROME_DRIVER, otherProperties.getProperty(PROPERTY_WEBDRIVER_CHROME_DRIVER));
     }
 
 }

@@ -1,7 +1,6 @@
 package helpers;
 
 import com.codeborne.selenide.WebDriverRunner;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.Dimension;
 
 /**
